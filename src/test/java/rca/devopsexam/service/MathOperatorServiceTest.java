@@ -17,16 +17,21 @@ public class MathOperatorServiceTest {
 
     @Test
     public void should_create_math_operation_success() throws InvalidOperationException {
-        // Given
         double operator1 = 4;
-        double operator2 = 9;
+        double operator2 = 6;
         String operation = "+";
 
-        // When
         double actualMathOperator = mathOperatorService.doMath(operator1, operator2, operation);
 
-        // Then
-        double expectedMathOperator = 13; // You need to calculate the expected result based on your business logic.
+        double expectedMathOperator = 10;
         assertThat(actualMathOperator).isEqualTo(expectedMathOperator);
+    }
+    @Test
+    public void should_create_math_subtraction_operation_success() throws InvalidOperationException {
+        double operator1 = 8;
+        double operator2 = 3;
+        String operation = "-";
+        double result = mathOperatorService.doMath(operator1, operator2, operation);
+        assertThat(result).isEqualTo(5);
     }
 }
