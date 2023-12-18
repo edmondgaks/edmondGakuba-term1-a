@@ -34,4 +34,21 @@ public class MathOperatorServiceTest {
         double result = mathOperatorService.doMath(operator1, operator2, operation);
         assertThat(result).isEqualTo(5);
     }
+    @Test
+    public void should_create_math_multiplication_operation_success() throws InvalidOperationException {
+        double operator1 = 4;
+        double operator2 = 9;
+        String operation = "*";
+        double result = mathOperatorService.doMath(operator1, operator2, operation);
+        assertThat(result).isEqualTo(36);
+    }
+
+    @Test
+    public void should_create_math_division_operation_success() throws InvalidOperationException {
+        double operator1 = 10;
+        double operator2 = 2;
+        String operation = "/";
+        double result = mathOperatorService.doMath(operator1, operator2, operation);
+        assertThat(result).isEqualTo(5);
+    }
 }
