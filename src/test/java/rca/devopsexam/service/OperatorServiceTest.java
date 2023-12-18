@@ -10,7 +10,7 @@ import rca.devopsexam.devops.serviceImpls.MathOperatorImpl;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
-public class MathOperatorServiceTest {
+public class OperatorServiceTest {
 
     @InjectMocks
     private MathOperatorImpl mathOperatorService;

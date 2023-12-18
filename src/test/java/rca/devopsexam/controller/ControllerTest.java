@@ -15,7 +15,7 @@ import rca.devopsexam.devops.payload.ApiResponse;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class MathControllerTest {
+public class ControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
