@@ -41,4 +41,12 @@ public class MathControllerTest {
         assertEquals(200, response.getStatusCode().value());
     }
 
+    @Test
+    public void doMathOperation_Subtraction_Success() {
+        DoMathRequestDto dto = new DoMathRequestDto(8, 3, "-");
+        ResponseEntity<ApiResponse> response = this.restTemplate.postForEntity("/api/v1/do_math", dto, ApiResponse.class);
+        assertEquals(200, response.getStatusCode().value());
+    }
+
+    
 }
