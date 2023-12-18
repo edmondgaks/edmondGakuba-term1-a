@@ -1,1 +1,5 @@
-"# edmondGakuba-term1-a" 
+# edmondGakuba-term1-a
+TITLE: DEVOPS Exam
+NAME: EDMOND GAKUBA
+Class: Year 3A
+RCA0310LUB
