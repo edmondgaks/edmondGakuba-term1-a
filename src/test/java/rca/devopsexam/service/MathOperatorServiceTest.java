@@ -51,4 +51,12 @@ public class MathOperatorServiceTest {
         double result = mathOperatorService.doMath(operator1, operator2, operation);
         assertThat(result).isEqualTo(5);
     }
+    @Test
+    public void should_create_math_exponentiation_operation_success() throws InvalidOperationException {
+        double operator1 = 2;
+        double operator2 = 3;
+        String operation = "**";
+        double result = mathOperatorService.doMath(operator1, operator2, operation);
+        assertThat(result).isEqualTo(8);
+    }
 }
