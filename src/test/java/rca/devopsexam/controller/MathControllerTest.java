@@ -55,5 +55,17 @@ public class MathControllerTest {
         assertEquals(200, response.getStatusCode().value());
     }
 
-    
+    @Test
+    public void doMathOperation_Logarithm_Success() {
+        DoMathRequestDto dto = new DoMathRequestDto(10, 2, "log");
+        ResponseEntity<ApiResponse> response = this.restTemplate.postForEntity("/api/v1/do_math", dto, ApiResponse.class);
+        assertEquals(200, response.getStatusCode().value());
+    }
+
+    @Test
+    public void doMathOperation_NaturalLogarithm_Success() {
+        DoMathRequestDto dto = new DoMathRequestDto(10, 2, "ln");
+        ResponseEntity<ApiResponse> response = this.restTemplate.postForEntity("/api/v1/do_math", dto, ApiResponse.class);
+        assertEquals(200, response.getStatusCode().value());
+    }
 }
