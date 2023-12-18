@@ -59,4 +59,12 @@ public class MathOperatorServiceTest {
         double result = mathOperatorService.doMath(operator1, operator2, operation);
         assertThat(result).isEqualTo(8);
     }
+    @Test
+    public void should_create_math_logarithm_operation_success() throws InvalidOperationException {
+        double operator1 = 2;
+        double operator2 = 100;
+        String operation = "log";
+        double result = mathOperatorService.doMath(operator1, operator2, operation);
+        assertThat(result).isEqualTo(4); // Adjust the expected result based on your business logic.
+    }
 }
