@@ -6,10 +6,8 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 import rca.devopsexam.devops.exceptions.InvalidOperationException;
 import rca.devopsexam.devops.serviceImpls.MathOperatorImpl;
-import static org.assertj.core.api.Assertions.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MathOperatorServiceTest {
@@ -19,16 +17,16 @@ public class MathOperatorServiceTest {
 
     @Test
     public void should_create_math_operation_success() throws InvalidOperationException {
+        // Given
         double operator1 = 4;
         double operator2 = 9;
         String operation = "+";
 
-        double mathOperation = mathOperatorService.doMath(operator1,operator2, operation);
-        when(mathOperatorService.doMath(operator1, operator2, operation)).thenReturn(mathOperation);
-
+        // When
         double actualMathOperator = mathOperatorService.doMath(operator1, operator2, operation);
 
-        assertThat(mathOperation).usingRecursiveComparison().isEqualTo(actualMathOperator);
+        // Then
+        double expectedMathOperator = 13; // You need to calculate the expected result based on your business logic.
+        assertThat(actualMathOperator).isEqualTo(expectedMathOperator);
     }
-
 }
